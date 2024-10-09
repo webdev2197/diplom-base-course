@@ -1,0 +1,263 @@
+:root {
+  --montser: "Montserrat", sans-serif;
+
+  --accent-light: rgb(243, 243, 243);
+  --accent-dark: rgb(43, 53, 65);
+  --light: rgb(251, 241, 56);
+  --light-gradient: linear-gradient(90deg, rgb(251, 241, 56), rgba(253, 249, 182, 0.45) 100%);
+
+  --tr: 0.2s;
+}
+
+body {
+  font-family: var(--montser);
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[class] {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  margin-top: 50px;
+  margin-bottom: 158px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1171px;
+  padding: 0 15px;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.header-menu {
+  display: flex;
+  gap: 92px;
+  align-items: center;
+}
+
+.header-logo {
+  width: 97px;
+  height: 30px;
+}
+
+.header-list {
+  display: flex;
+  gap: 54px;
+}
+
+.header-list-link {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 150%;
+  color: var(--accent-dark);
+}
+
+.header-list-link:hover {
+  border-bottom: 1px solid var(--accent-dark);
+  padding-bottom: 10px;
+}
+
+.header-link {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 150%;
+  color: var(--accent-dark);
+  position: relative;
+}
+
+.header-link::before {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: var(--light);
+  border-radius: 50%;
+  z-index: -1;
+  left: -13px;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+  gap: 44px;
+}
+
+.header-content-desc {
+  flex-basis: 60%;
+}
+
+.header-title {
+  font-size: clamp(26px, 4vw, 50px);
+  font-weight: 700;
+  line-height: 125%;
+  text-transform: uppercase;
+  color: var(--accent-dark);
+  margin-bottom: 40px;
+}
+
+.header-text {
+  font-size: clamp(26px, 3vw, 40px);
+  font-weight: 400;
+  line-height: 125%;
+  color: var(--accent-dark);
+  margin-bottom: 20px;
+}
+
+.header-text span {
+  margin-right: 16px;
+}
+
+.header-desc {
+  max-width: 297px;
+  font-size: clamp(16px, 2vw, 18px);
+  font-weight: 400;
+  line-height: 150%;
+  color: var(--accent-dark);
+  margin-left: 91px;
+  margin-bottom: 40px;
+}
+
+.header-btn {
+  background-color: var(--light);
+  padding: 20px 30px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 150%;
+  color: var(--accent-dark);
+  text-transform: uppercase;
+  border: none;
+  margin-left: 91px;
+  cursor: pointer;
+  box-shadow: 0px 13px 24px 0px rgba(251, 241, 56, 0.3);
+  transition: var(--tr);
+}
+
+.header-btn:hover {
+  background-color: var(--accent-dark);
+  color: var(--light);
+  box-shadow: 0px 13px 24px 0px rgba(70, 86, 106, 0.2);
+}
+
+.header-content-bg {
+  height: clamp(493px, 59vw, 852px);
+  flex-basis: 40%;
+  background: var(--light-gradient);
+  opacity: 0.2;
+}
+
+.header-content-img {
+  position: absolute;
+  width: clamp(399px, 69vw, 996px);
+  bottom: 0;
+  right: -11vw;
+}
+
+.header-arrow {
+  position: absolute;
+  bottom: -50px;
+}
+
+.workout-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 38px;
+}
+
+.workout-title {
+  max-width: 356px;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 125%;
+  color: var(--accent-dark);
+}
+
+.workout-date {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 125%;
+  color: var(--accent-dark);
+}
+
+.workout-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  grid-template-rows: 309px 73px 281px;
+  grid-template-areas: "a b c" "d b f" "d e f";
+}
+
+.workout-item{
+  border: 1px solid var(--accent-dark);
+  padding: 20px 30px;
+}
+
+.workout-item:nth-child(1){
+  grid-area: a;
+}
+.workout-item:nth-child(2) {
+  grid-area: b;
+}
+.workout-item:nth-child(3) {
+  grid-area: c;
+}
+.workout-item:nth-child(4) {
+  grid-area: d;
+}
+.workout-item:nth-child(5) {
+  grid-area: e;
+}
+.workout-item:nth-child(6) {
+  grid-area: f;
+}

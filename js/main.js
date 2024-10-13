@@ -1,6 +1,6 @@
 // Smooth Scroll
 
-const links = document.querySelectorAll(".banner-btn");
+const links = document.querySelectorAll(".header-arrow, .header-list-link");
 
 for (const link of links) {
   link.addEventListener("click", clickHandler);
@@ -41,14 +41,3 @@ function scrollFunction() {
     document.getElementById('btnUp').className = 'button-up hidden';
   }
 }
-
-// Menu
-
-function openModal() {
-  document.getElementById("modal").style.top = "0px";
-}
-
-function closeModal() {
-  document.getElementById("modal").style.top = "-400px";
-}
-

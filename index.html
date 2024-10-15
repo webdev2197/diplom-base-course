@@ -23,6 +23,7 @@
           <a href="#" class="logo">
             <img src="images/logo.png" alt="Логотип">
           </a>
+          <button class="burger-menu" onclick="openModal()"></button>
           <ul class="header-list">
             <li class="header-list-item"><a href="#" class="header-list-link">Мероприятия</a></li>
             <li class="header-list-item"><a href="#workout" class="header-list-link">Расписание</a></li>
@@ -52,7 +53,7 @@
             Расписание тренировок
           </h2>
           <p class="workout-date">
-            22 - 28 июня
+            22&nbsp;-&nbsp;28&nbsp;июня
           </p>
         </div>
         <div class="workout-grid">
@@ -121,6 +122,11 @@
         <form action="get" class="subscr-form">
           <div class="subscr-form-wrapper">
             <input type="email" class="subscr-textarea" placeholder="Ваш e-mail">
+            <label class="subscr-label subscr-hidden">
+              <input type="checkbox" class="subscr-check" checked>
+              <span class="custom-checkbox"></span>Согласен с обработкой&nbsp;<a href="#" class="subscr-link">
+                персональных данных</a>
+            </label>
             <button class="subscr-btn btn">ПОДПИСАТЬСЯ</button>
           </div>
           <label class="subscr-label">
@@ -146,7 +152,9 @@
           </p>
           <button class="about-btn btn">Записаться</button>
         </div>
-        <img src="images/about-image.jpeg" alt="" class="about-img">
+        <div class="about-thumb">
+          <img src="images/about-image.jpeg" alt="" class="about-img">
+        </div>
       </div>
       <div class="about-items">
         <div class="about-item">
@@ -198,7 +206,9 @@
           </ul>
         </nav>
         <a href="info@freefit.com" class="footer-link">info@freefit.com</a>
-
+        <p class="footer-about-min">
+          Сделано в рамках курса учебной платформы <a href="#" class="footer-about-link">You Can Code</a>
+        </p>
       </div>
       <div class="footer-bottom">
         <p class="footer-copyrite">
@@ -211,6 +221,24 @@
     </div>
   </footer>
   <a href="#headerTop" class="button-up hidden" id="btnUp">Наверх</a>
+  <div class="modal" id="modal">
+    <div class="modal-wrapper">
+      <div class="modal-menu">
+        <a href="#" class="logo">
+          <img src="images/logo.png" alt="Логотип">
+        </a>
+        <button class="modal-button" onclick="closeModal()"></button>
+      </div>
+      <nav class="modal-nav">
+        <ul class="header-list _modal">
+          <li class="header-list-item"><a href="#" class="header-list-link">Мероприятия</a></li>
+          <li class="header-list-item"><a href="#workout" class="header-list-link">Расписание</a></li>
+          <li class="header-list-item"><a href="#about" class="header-list-link">О компании</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="modal-bgc"></div>
+  </div>
   <script src="js/main.js"></script>
 </body>
 
